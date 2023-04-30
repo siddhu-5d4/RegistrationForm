@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capstone Project</title>
+    <script src="index.js"></script>
+</head>
+<style>
+    body{
+        height: 100%;
+        width: 100%;
+    }
+    .temp{
+        height: 47px;
+    }
+    .temp3{
+        background:linear-gradient(#3EADCF,#ABE9CD);
+        border-radius: 20px;
+        width: 500px;
+        height: 320px;
+    }
+    .temp1{
+        justify-content: center;
+        display: flex;
+    }
+    input[type=text],input[type=email],input[type=password],input[type=date]{
+        float: right;
+        border-radius: 4px;
+        width: 230px;
+        height: 30px;
+        border-radius: 5px;
+    }
+    .temp3{
+        margin: 0px 500px;
+        padding: 15px;
+    }
+    input[type=submit]{
+        color: green;
+        border-radius: 0.5%;
+        float: right;
+    }
+    table{
+        text-align: center;
+        justify-content: center;
+        margin-left: 350px;
+    }
+    form{
+        padding-top: 80px;
+    }
+</style>
+<body>
+    <form onsubmit="event.preventDefault(); registerUser();">
+        <div class="temp3">
+            <div class="temp1"><h1>Registration Form</h1></div>
+       <div class="temp"><label for="name">Name </label>
+        <input type="text" id="name" placeholder="Enter Full name" name="name" required><br>
+       </div> 
+
+        <div class="temp"><label for="email">Email </label>
+            <input type="email" id="email" placeholder="Enter Email address" name="email" required><br>
+            </div>
+
+       <div class="temp"> <label for="password">Password </label>
+        <input type="password" id="password" placeholder="Enter the Password"  name="password" required><br>
+        </div>
+
+        <div class="temp"><label for="dob">Date of Birth </label>
+            <input type="date" id="dob" name="dob" validateDOB() required><br>
+            </div>
+
+        <label>
+        <input type="checkbox" id="acceptTerms" name="acceptTerms">Accept Terms and Conditions
+        </label><br>
+        <input type="submit" value="Submit">
+        </div>
+        
+
+        
+    </form>
+    <table id="users" border="3" style="width:50%;">
+        <caption><h1 style="color:red;">Entries</h1></caption>
+          <thead>
+              <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Password</th>
+                  <th>dob</th>
+                  <th>accepted terms?</th>
+              </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+</body>
+</html>
